@@ -5,8 +5,6 @@ button {
 .my-container {
     max-width: 1000px;
     margin: 0 auto;
-    /* debug */
-    background-color: lightcoral;
 }
 
 .my-container div {
@@ -15,4 +13,9 @@ button {
     border: 1px solid black;
     text-align: center;
     line-height: 50px;
+}
+
+.my-container .active {
+    background-color: black;
+    color: white;
 }

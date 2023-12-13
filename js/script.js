@@ -38,7 +38,16 @@ myButton.addEventListener('click', function () {
         // Metto le celle nel mio container
         myContainer.append(myCell);
 
+        // Aggiungo la funzione del click a myCell
+        myCell.addEventListener('click', function () {
 
+            // Messaggio in console
+            console.log('ciao');
+
+            // Add classe a myCell
+            this.classList.toggle('active');
+
+        });
 
     }
 
