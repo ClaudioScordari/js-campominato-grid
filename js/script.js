@@ -16,6 +16,13 @@
 // Seleziono il mio bottone
 const myButton = document.querySelector('button');
 
+// Mi seleziono la select
+const mySelect = document.querySelector('select');
+
+// Mi seleziono i lvl di difficoltà
+const optionDifficoltà = document.querySelectorAll('option');
+console.log(optionDifficoltà);
+
 // Aggiungo il click del bottone
 myButton.addEventListener('click', function () {
 
@@ -25,15 +32,20 @@ myButton.addEventListener('click', function () {
     myContainer.classList.remove('d-none');
     myContainer.classList.add('d-flex');
 
+    // Mi seleziono il vaore della select
+    const lvlDiff = parseInt(mySelect.value);
+
+    // Cancello la griglia vecchia
+    myContainer.innerHTML = '';
+
     //Creo un ciclo per crearmi 100 div-celle
-    for (let index = 1; index <= 100; index++) {
+    for (let index = 1; index <= lvlDiff; index++) {
 
         // Devo creare i div celle
         const myCell = document.createElement('div');
 
         // Metto i numeri nelle celle
         myCell.innerHTML = index;
-        console.log(myCell);
 
         // Metto le celle nel mio container
         myContainer.append(myCell);
@@ -46,9 +58,14 @@ myButton.addEventListener('click', function () {
 
             // Add classe a myCell
             this.classList.toggle('active');
-
         });
-
     }
-
 });
+
+/*
+
+    Aggiornamento bonus
+
+    
+
+*/
